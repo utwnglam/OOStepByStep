@@ -1,7 +1,5 @@
 package practice03;
 
-import practice02.Person;
-
 public class Student extends Person {
   private final int klass;
 
