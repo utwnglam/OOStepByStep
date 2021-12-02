@@ -33,8 +33,7 @@ public class Teacher extends Person {
   }
 
   public String introduceWith(Student student) {
-    List<Integer> classesNum = classes.stream().map(Klass::getNumber).collect(Collectors.toList());
-    if (classes.size() != 0 && classesNum.contains(student.getKlass().getNumber())) {
+    if (classes.size() != 0 && isTeaching(student)) {
       return super.introduce() + String.format(" I am a Teacher. I teach %s.", student.getName());
     }
     return super.introduce() + String.format(" I am a Teacher. I don't teach %s.", student.getName());
